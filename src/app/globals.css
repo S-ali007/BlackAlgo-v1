@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  color: #E0E0FFCC;
+  border: none;
+  font-size: 14px;
+  margin-top: 13px;
+}
+
+.input-label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: all 0.3s;
+  color: #fff;
+  font-size: 14px;
+
+}
+
+.input-field:focus + .input-label, .input-field:not(:placeholder-shown) + .input-label {
+  font-size: 10px;
+  transform: translateY(-90%);
+  color: #E0E0FFCC;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
