@@ -1,12 +1,19 @@
+"use client";
 import Button from "@/components/Button/Button";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import { useState } from "react";
 
 function Dashboard() {
   const gradientStyle = {
     backgroundImage: "linear-gradient(141deg, #001687 5.29%, #05B6FE 101.76%)",
   };
-
+  const [toggleStates, setToggleStates] = useState([false, false, false]);
+  const handleCheckboxChange = (index) => {
+    const newToggleStates = [...toggleStates];
+    newToggleStates[index] = !newToggleStates[index];
+    setToggleStates(newToggleStates);
+  };
   const maindata = [
     {
       id: "0",
@@ -334,7 +341,7 @@ function Dashboard() {
         {/* side navbar div */}
         <div className="max-w-[263px] w-full flex gap-[250px] flex-col justify-between  ">
           <div className="max-w-[263px] w-full flex flex-col  mt-[17px]  gap-[4px]  ">
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px]  border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer  items-center gap-[16px] pl-[24px]  border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -355,7 +362,7 @@ function Dashboard() {
                 Dashboard
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -377,7 +384,7 @@ function Dashboard() {
                 Transactions
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -399,7 +406,7 @@ function Dashboard() {
                 Settings
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -421,7 +428,7 @@ function Dashboard() {
                 Help
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -443,7 +450,7 @@ function Dashboard() {
                 Admin
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -465,7 +472,7 @@ function Dashboard() {
                 MT Accounts
               </div>
             </div>
-            <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
+            <div className="group flex max-w-[263px] w-full cursor-pointer items-center gap-[16px] pl-[24px] border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -500,15 +507,18 @@ function Dashboard() {
                   We are here to help! Support 24/7
                 </div>
                 <div className="mt-[24px] max-w-[96px] w-full ">
-                <Button extraClasses={'bg-[#fff] max-w-[96px] w-full  text-[#0000CC] py-[8px] '} text={'Get Help'} href={"/"}/>
+                  <Button
+                    extraClasses={
+                      "bg-[#fff] max-w-[96px] w-full  text-[#0000CC] py-[8px] "
+                    }
+                    text={"Get Help"}
+                    href={"/"}
+                  />
+                </div>
               </div>
-              </div>
-              
 
               <div className="absolute max-w-[255px]  w-full  flex   justify-end items-end ml-[25px] mt-[-6px] z-20">
                 <img src="/Dashborad_assets/need-help-asset.svg" alt="" />
-
-                
               </div>
               <div className="max-w-[512px] full   rounded-[24px]  min-h-[186px] h-full  overflow-hidden">
                 <div
@@ -600,20 +610,90 @@ function Dashboard() {
                   id=""
                   className=" bg-inherit max-w-[74px] w-full"
                 >
-                  <option label="1">1</option>
-                  <option label="2">2</option>
-                  <option label="3">3</option>
-                  <option label="4">4</option>
-                  <option label="5">5</option>
-                  <option label="6">6</option>
-                  <option label="7">7</option>
-                  <option label="8">8</option>
-                  <option label="9">9</option>
-                  <option label="10">10</option>
-                  <option label="11">11</option>
-                  <option label="12">12</option>
-                  <option label="13">13</option>
-                  <option label="14">14</option>
+                  <option
+                    label="1"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    1
+                  </option>
+                  <option
+                    label="2"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    2
+                  </option>
+                  <option
+                    label="3"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    3
+                  </option>
+                  <option
+                    label="4"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    4
+                  </option>
+                  <option
+                    label="5"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    5
+                  </option>
+                  <option
+                    label="6"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    6
+                  </option>
+                  <option
+                    label="7"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    7
+                  </option>
+                  <option
+                    label="8"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    8
+                  </option>
+                  <option
+                    label="9"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    9
+                  </option>
+                  <option
+                    label="10"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    10
+                  </option>
+                  <option
+                    label="11"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    11
+                  </option>
+                  <option
+                    label="12"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    12
+                  </option>
+                  <option
+                    label="13"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    13
+                  </option>
+                  <option
+                    label="14"
+                    className="text-[#fff] bg-[#15161B] text-[14px] font-[600]"
+                  >
+                    14
+                  </option>
                 </select>
               </div>
               <div className="max-w-[187px] w-full flex gap-[8px] items-center mt-[8px]">
@@ -851,14 +931,25 @@ function Dashboard() {
                   </div>
                 </div>
 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[0]}
+                    onChange={() => handleCheckboxChange(0)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[0] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[0] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
               <div className="flex  justify-between mt-[20px] ">
@@ -878,14 +969,25 @@ function Dashboard() {
                   </div>
                 </div>
 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[1]}
+                    onChange={() => handleCheckboxChange(1)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[1] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[1] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
               <div className="flex  justify-between mt-[20px] ">
@@ -905,14 +1007,25 @@ function Dashboard() {
                   </div>
                 </div>
 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[2]}
+                    onChange={() => handleCheckboxChange(2)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[2] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[2] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
             </div>

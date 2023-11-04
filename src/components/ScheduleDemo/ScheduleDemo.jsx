@@ -291,26 +291,27 @@ function ScheduleDemo() {
                 </div>
               </div>
               <div className="max-w-[248px] w-full">
+                {/* time zonw */}
                 <div className="input-container max-w-[384px] w-full pr-[8px] py-[8px] pl-[16px] bg-[#E0E0FF05] rounded-[12px]">
                   <select
                     type="time-zone"
-                    className="w-full bg-transparent outline-none text-[#fff] input-field text-[14px] font-[500]"
+                    className="w-full bg-transparent outline-none text-[#fff] input-field text-[14px] font-[500] rounded-[12px]]"
                     placeholder=""
                     pattern="2023-03-21"
                   >
-                    <option value="1" className="text-[#fff] bg-[black]">
+                    <option value="1" className="text-[#fff] bg-[#15161B] text-[14px] font-[600] ">
                       Pakistan
                     </option>
-                    <option value="2" className="text-[#fff] bg-[black]">
+                    <option value="2" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">
                       NewZeland
                     </option>
-                    <option value="3" className="text-[#fff] bg-[black]">
+                    <option value="3" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">
                       IreLand
                     </option>
-                    <option value="4" className="text-[#fff] bg-[black]">
+                    <option value="4" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">
                       England
                     </option>
-                    <option value="5" className="text-[#fff] bg-[black]">
+                    <option value="5" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">
                       India
                     </option>
                   </select>

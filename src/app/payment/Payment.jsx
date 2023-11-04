@@ -32,13 +32,13 @@ function Payment() {
                   className="max-w-[303px] w-full   bg-transparent  mt-[16px] rounded-[12px] outline-none text-[#fff] text-[16px] font-[500] leading-[28px]"
                   placeholder="COUNTRY"
                 >
-                  <option value="USA">USA</option>
-                  <option value="USA">Pakistan</option>
-                  <option value="USA">India</option>
-                  <option value="USA">Germany</option>
-                  <option value="USA">New Zeland</option>
-                  <option value="USA">South Africa</option>
-                  <option value="USA">Nigeria</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">USA</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">Pakistan</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">India</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">Germany</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">New Zeland</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">South Africa</option>
+                  <option value="USA" className="text-[#fff] bg-[#15161B] text-[14px] font-[600]">Nigeria</option>
                 </select>
               </div>
 
