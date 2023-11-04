@@ -332,7 +332,7 @@ function Dashboard() {
           </svg>
         </div>
         {/* side navbar div */}
-        <div className="max-w-[158px] w-full flex gap-[250px] flex-col justify-between  ">
+        <div className="max-w-[263px] w-full flex gap-[250px] flex-col justify-between  ">
           <div className="max-w-[263px] w-full flex flex-col  mt-[17px]  gap-[4px]  ">
             <div className="group flex max-w-[263px] w-full  items-center gap-[16px] pl-[24px]  border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
