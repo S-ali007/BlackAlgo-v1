@@ -506,10 +506,10 @@ function Dashboard() {
                 <div className="max-w-[133px] w-full mt-[12px] text-[#E0E0FFCC] text-[13px] font-[500] leading-[16px]">
                   We are here to help! Support 24/7
                 </div>
-                <div className="mt-[24px] max-w-[96px] w-full ">
+                <div className="mt-[24px] max-w-[96px] w-full cursor-pointer ">
                   <Button
                     extraClasses={
-                      "bg-[#fff] max-w-[96px] w-full  text-[#0000CC] py-[8px] "
+                      "bg-[#fff] max-w-[96px] w-full  text-[#0000cc] py-[8px] cursor-pointer   "
                     }
                     text={"Get Help"}
                     href={"/"}
