@@ -500,7 +500,7 @@ function Dashboard() {
                   We are here to help! Support 24/7
                 </div>
                 <div className="mt-[24px] max-w-[96px] w-full ">
-                <Button extraClasses={'bg-[#fff] max-w-[96px] w-full  text-[#000000CC] py-[8px] '} text={'Get Help'} href={"/"}/>
+                <Button extraClasses={'bg-[#fff] max-w-[96px] w-full  text-[#000000CC] py-[8px] text-[#000000CC]'} text={'Get Help'} href={"/"}/>
               </div>
               </div>
               
