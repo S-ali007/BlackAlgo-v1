@@ -2,6 +2,7 @@ import Footer from "@/components/Footer";
 import Login from "./Login";
 
 
+
 export const metadata ={
     title: 'Login',
 
