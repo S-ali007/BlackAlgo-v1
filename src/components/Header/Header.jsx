@@ -1,10 +1,26 @@
-import Image from "next/image";
+"use client"
+import { useEffect } from "react";
 import Button from "../Button/Button";
+import { usePathname } from 'next/navigation'
 
 const Header = ({ children, extraClasses }) => {
-  const backgroundblack = () => {};
+  
+const pathname = usePathname()
+const url = `${pathname}`
+    console.log(url)
+
+    useEffect(() => {
+      const url = `${pathname}`
+      console.log(url)
+      
+    }, [pathname])
+   
+  
   return (
-    <nav className="  w-full bg-transparent fixed  z-40 ">
+    <>
+    
+     
+   { url !=='/dashboard' &&(<nav className="  w-full bg-transparent fixed  z-40 ">
       <div
         className={`${extraClasses} max-w-[1680px] w-full  flex  justify-between  mx-auto px-[180px]  `}
       >
@@ -31,7 +47,9 @@ const Header = ({ children, extraClasses }) => {
           />
         </div>
       </div>
-    </nav>
+    </nav>)}
+          
+  </>
   );
 };
 

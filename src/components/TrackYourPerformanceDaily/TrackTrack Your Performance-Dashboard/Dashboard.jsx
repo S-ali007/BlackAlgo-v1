@@ -1,6 +1,18 @@
+"use client"
+
+import { useState } from "react";
+
 function Dashboard() {
   const gradientStyle = {
     backgroundImage: "linear-gradient(#001687, #05B6FE)",
+    
+  };
+
+  const [toggleStates, setToggleStates] = useState([false, false, false]);
+  const handleCheckboxChange = (index) => {
+    const newToggleStates = [...toggleStates];
+    newToggleStates[index] = !newToggleStates[index];
+    setToggleStates(newToggleStates);
   };
   return (
     <div>
@@ -190,14 +202,25 @@ function Dashboard() {
                 </div>
                 </div>
                 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[0]}
+                    onChange={() => handleCheckboxChange(0)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[0] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[0] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
               <div className="flex  justify-between mt-[20px] ">
@@ -216,14 +239,25 @@ function Dashboard() {
                 </div>
                 </div>
                 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[1]}
+                    onChange={() => handleCheckboxChange(1)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[1] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[1] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
               <div className="flex  justify-between mt-[20px] ">
@@ -242,14 +276,25 @@ function Dashboard() {
                 </div>
                 </div>
                 
-                <label class="relative inline-flex items-center mr-5 cursor-pointer mt-[20px] justify-center ">
+                <label className="autoSaverSwitch relative inline-flex cursor-pointer select-none items-center">
                   <input
                     type="checkbox"
-                    value=""
-                    class="sr-only peer"
-                    checked
+                    name="autoSaver"
+                    className="sr-only"
+                    checked={toggleStates[2]}
+                    onChange={() => handleCheckboxChange(2)}
                   />
-                  <div className="w-11 h-6  bg-gray-200 rounded-full   dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                  <span
+                    className={`slider mr-3 flex h-[26px] w-[50px] items-center rounded-full p-1 duration-200 ${
+                      toggleStates[2] ? "bg-[#00BBFF]" : "bg-[#CCCCCE]"
+                    }`}
+                  >
+                    <span
+                      className={`dot h-[18px] w-[18px] rounded-full bg-white duration-200 ${
+                        toggleStates[2] ? "translate-x-6" : ""
+                      }`}
+                    ></span>
+                  </span>
                 </label>
               </div>
             </div>
