@@ -7,7 +7,7 @@ function TrackYourPerformanceDaily() {
     <div className="w-full flex flex-col justify-center  gap-[48px]  relative bg-[#0E0F12] pt-[120px] pb-[120px]">
       {/* left-div */}
       <div
-        className={`max-w-[484px] w-full mx-auto text-[48px] text-[#fff] text-center font-[600] ${popins.className}`}
+        className={`max-w-[484px] w-full mx-auto text-[48px] text-[#fff] text-center font-[600] tracking-[-2px] leading-[48px] ${popins.className}`}
       >
         Track Your Performance Daily
       </div>
