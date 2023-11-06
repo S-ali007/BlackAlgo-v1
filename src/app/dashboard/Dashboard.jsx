@@ -189,7 +189,7 @@ function Dashboard() {
       {/* left -side */}
       <div className="max-w-[263px] w-full bg-[#15161B] rounded-tr-[40px]  pb-[2px] h-screen ">
         {/* logo */}
-        <div className="max-w-[158px] w-full pt-[18px] pl-[18px]">
+        {/* <div className="max-w-[158px] w-full pt-[18px] pl-[18px]">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="158"
@@ -337,9 +337,9 @@ function Dashboard() {
               </clipPath>
             </defs>
           </svg>
-        </div>
+        </div> */}
         {/* side navbar div */}
-        <div className="max-w-[263px] w-full flex gap-[250px] flex-col justify-between  ">
+        <div className="max-w-[263px] w-full flex gap-[250px] flex-col justify-between mt-[56px]  ">
           <div className="max-w-[263px] w-full flex flex-col  mt-[17px]  gap-[4px]  ">
             <div className="group flex max-w-[263px] w-full cursor-pointer  items-center gap-[16px] pl-[24px]  border-l-[2px] border-transparent hover:bg-[#E0E0FF0A] hover:border-l-[2px]   hover:border-[#00BBFF]">
               <div className="w-full max-w-[20px]">
@@ -532,7 +532,7 @@ function Dashboard() {
       </div>
 
       {/* dashboard */}
-      <div className="max-w-[1133px] w-full mt-[96px]    ">
+      <div className="max-w-[1133px] w-full mt-[106px]    ">
         <div className="max-w-[1133px] w-full">
           <h1 className="text-[#fff] font-[600] text-[28px]">Dashboard</h1>
         </div>
