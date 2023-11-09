@@ -33,10 +33,13 @@ function LineChartColor({ extraClasses, extraColor }) {
         label: "S&P 500",
         data: Data.flatMap((data) => (data.price ? data.price : [])),
         borderColor: "#00BBFF",
-        backgroundColor: "red",
+        backgroundColor: "#FEE2E2",
         pointRadius: false,
-
-        fill: "origin",
+        fill: true,
+        fill: {
+          target: "origin",
+          above: "#FEE2E2",
+        },
 
         borderRadius: 1,
       },

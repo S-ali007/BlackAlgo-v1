@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className=" w-full  bg-[#131416] ">
       <div className="max-w-[1680px] w-full mx-auto">
-        <Hero />
+        {/* <Hero />
         <TrackYourPerformanceDaily />
         <ProvenTraceRecord />
         <EarnEvenBearMarket />
@@ -23,7 +23,7 @@ export default function Home() {
         <SimplePricing />
         <AboutBlackalgo />
         <Faq />
-        <Footer />
+        <Footer /> */}
       </div>
     </div>
   );

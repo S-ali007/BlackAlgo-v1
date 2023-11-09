@@ -15,6 +15,10 @@ module.exports = {
       boxShadow: {
         '3xl': '0px 4px 8px 0px rgba(9, 13, 20, 0.16), -2px -2px 4px 0px rgba(224, 224, 255, 0.02), 0px 1px 2px 0px rgba(9, 13, 20, 0.24)',
       }
+      ,
+      fontFamily: {
+        sans: ['var(--font-montreal)']
+      }
     },
   },
   plugins: [],

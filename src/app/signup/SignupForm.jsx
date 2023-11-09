@@ -1,8 +1,15 @@
+"use client"
 import Button from "@/components/Button/Button";
 import Link from "next/link";
 import { popins } from "../layout";
+import { useState } from "react";
 
 function SignupForm() {
+  useState({
+    name:"",
+    emil:"",
+    password:"",
+  })
   return (
     <div className="  shadow-3xl h-max max-w-[536px] w-full rounded-[24px] bg-[#15161B] flex flex-col gap-[40px] p-[40px] mt-[-90px] z-20">
       <div
